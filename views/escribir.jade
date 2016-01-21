@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    script(src='/javascripts/jquery.js')
+    script(src='/javascripts/escribir.js')
+    link(href='../stylesheets/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='../stylesheets/css.css')
+  body
+    h1 Escribir Mensaje
+    #formulario
+      .container
+        form(role='form', action='', method='post')
+          .form-group
+            label(for='emaildestino') Email del Receptor
+            .input-group
+              input#emaildestino.form-control(type='email', name='emaildestino', placeholder='Introduzca email al que enviar', required='')
+              span.input-group-addon
+                i.glyphicon.glyphicon-ok.form-control-feedback
+          .form-group
+            label(for='asunto') Asunto
+            .input-group
+              input#asunto.form-control(type='text', name='asunto', placeholder='Introduzca Asunto', required='')
+              span.input-group-addon
+                i.glyphicon.glyphicon-ok.form-control-feedback
+          .form-group
+            label(for='mensaje') Mensaje
+            .input-group
+              textarea#mensaje.form-control(name='mensaje', rows='5', required='')
+              span.input-group-addon
+                i.glyphicon.glyphicon-ok.form-control-feedback
+          input#enviar.btn.btn-info.pull-right(type='submit', name='enviar', value='Enviar Email')
+
