@@ -20,7 +20,8 @@ router.post('/', function(req, res) {
 		    req.session.password = req.body.password;
 		    res.redirect('/users');
 		}).catch(function(err) {
-		    console.error(err);    
+		    console.error(err);
+		    res.redirect('/');	    
 		});
 
 });
